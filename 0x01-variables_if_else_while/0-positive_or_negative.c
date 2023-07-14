@@ -7,7 +7,7 @@
  *
  * Description: This program checks if number
  * is positive, negative or zero
- * Return: 0 if program runs succesfully
+ * Return: 0 if program runs successfully
  */
 
 int main(void)
