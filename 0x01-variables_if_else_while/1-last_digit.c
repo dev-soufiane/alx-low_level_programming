@@ -7,7 +7,7 @@
  *
  * Description: This program generates a random number
  * and determines the last digit.
- * Return: 0 if program runs succesfully
+ * Return: 0 if program runs successfully
  */
 
 int main(void)
