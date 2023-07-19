@@ -7,9 +7,9 @@
 void print_alphabet_x10(void)
 {
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	int x, i;
 
-	for (int x = 0; x < 9; x++)
+	for (x = 0; x < 9; x++)
 	{
 		for (i = 0; i < 26; i++)
 			_putchar(alphabet[i]);
