@@ -6,19 +6,14 @@
  * Return: Nothing
  */
 
-int _strlen(char *s);
-
 void print_rev(char *s)
 {
-	int len, last_index;
+	int i;
 
-	len = _strlen(s);
-	last_index = len - 1;
-
-	while (last_index >= 0)
-	{
-		_putchar(*(s + last_index));
-		last_index--;
-	}
+	i = 0;
+	while (*(s + i))
+		i++;
+	while (i--)
+		_putchar(*(s + i));
 	_putchar('\n');
 }
