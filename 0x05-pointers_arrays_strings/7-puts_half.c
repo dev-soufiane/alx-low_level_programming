@@ -13,11 +13,10 @@ void puts_half(char *str)
 	ln = 0;
 	while (str[ln] != '\0')
 		ln++;
-	for (i = ln / 2; i < ln ; i++)
+	n = (ln - 1) / 2;
+	for (i = n + 1; i < ln ; i++)
 	{
-		n = (ln - 1) / 2;
-		if (n % 2 == 1)
-			_putchar(str[i]);
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
