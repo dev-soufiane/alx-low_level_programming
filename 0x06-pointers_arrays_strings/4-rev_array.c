@@ -17,10 +17,10 @@ void reverse_array(int *a, int n)
 	{
 		cp_array[i] = a[i];
 	}
-	index = 1;
+	index = 0;
 	for (i = 0; i < n; i++)
 	{
-		a[i] = cp_array[n - index];
+		a[i] = cp_array[n - index - 1];
 		index++;
 	}
 }
