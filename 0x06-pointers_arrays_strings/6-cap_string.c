@@ -9,9 +9,9 @@
 
 char *cap_string(char *str)
 {
-	int capitalize = 1;
+	int i, capitalize = 1;
 
-	for (int i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (capitalize && str[i] >= 'a' && str[i] <= 'z')
 		{
