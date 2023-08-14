@@ -3,9 +3,9 @@
 
 /**
  * struct dog - Defines a new type struct dog
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
  */
 
 typedef struct dog
