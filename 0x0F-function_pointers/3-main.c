@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Executes arithmetic operations based on command line arguments
@@ -24,7 +26,7 @@ int main(int argc, char *argv[])
 
 	func = get_op_func(argv[2]);
 
-	if (func == NULL)
+	if (!func)
 	{
 		printf("Error\n");
 		return (99);
