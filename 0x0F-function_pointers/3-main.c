@@ -27,7 +27,13 @@ int main(int argc, char *argv[])
 	if (func == NULL)
 	{
 		printf("Error\n");
-		return (2);
+		return (99);
+	}
+
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
+	{
+		printf("Error\n");
+		return (100);
 	}
 
 	result = func(a, b);
