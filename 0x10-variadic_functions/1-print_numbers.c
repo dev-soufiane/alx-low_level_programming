@@ -19,6 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (!n)
 	{
+		printf("\n");
 		return;
 	}
 
@@ -30,6 +31,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 		if (i > 0)
 			printf("%s", separator);
+		else
+			printf("");
 	}
 
 	printf("\n");
