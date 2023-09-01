@@ -9,13 +9,8 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int i;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	for (i = 1UL << 63; i > 0; i = i >> 1)
-	{
-		if (n & i)
-			_putchar('1');
-		else
-			_putchar('0');
-	}
+	_putchar((n & 1) + '0');
 }
