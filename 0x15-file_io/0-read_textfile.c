@@ -10,45 +10,31 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+	char *bfr;
+	int f;
+	ssize_t r, w;
+
 	if (filename == NULL)
+		return (0);
+
+	f = open(filename, O_RDONLY);
+
+	if (f == -1)
+		return (0);
+
+	bfr = malloc(letters);
+
+	if (bfr == NULL)
 	{
+		close(f);
 		return (0);
 	}
 
-	FILE *file = fopen(filename, "r");
+	r = read(f, bfr, letters);
+	w = write(STDOUT_FILENO, bfr, r);
 
-	if (file == NULL)
-	{
-		return (0);
-	}
+	close(f);
+	free(bfr);
 
-	char *buffer = (char *)malloc((letters + 1) * sizeof(char));
-
-	if (buffer == NULL)
-	{
-		fclose(file);
-		return (0);
-	}
-
-	int ch;
-
-	ssize_t rd = 0;
-
-	size_t cnt = 0;
-
-	while ((ch = fgetc(file)) != EOF && cnt < letters)
-	{
-		buffer[cnt] = (char)ch;
-		cnt++;
-	}
-
-	buffer[cnt] = '\0';
-
-	ssize_t wtt = printf("%s", buffer);
-
-	fclose(file);
-	free(buffer);
-
-	return (wtt);
+	return (w);
 }
-
