@@ -11,7 +11,7 @@ void exit_97(int argc)
 {
 	if (argc != 3)
 	{
-		printf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 }
@@ -32,7 +32,7 @@ void exit_98(ssize_t tf, char *filename, int f_from, int f_to)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 		if (f_from != -1)
-			close(fd_from);
+			close(f_from);
 		if (f_to != -1)
 			close(f_to);
 		exit(98);
