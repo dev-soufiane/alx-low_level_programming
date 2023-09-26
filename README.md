@@ -48,7 +48,7 @@ Feel free to click on the project links above to access the respective directori
 
 To get started with a project, simply navigate to the project's directory by clicking on the provided link. Each project directory contains a detailed README file with information about the tasks it covers and instructions on how to proceed.
 
-## Contributing 🤝
+## Contributing 💡
 
 We welcome contributions from the community! If you encounter issues or have improvements to suggest, please check the [Issues](https://github.com/dev-soufiane/alx-low_level_programming/issues) tab and read our [Contributing Guidelines](CONTRIBUTING.md).
 
