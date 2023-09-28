@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /* Functions prototypes */
 int _putchar(char c);
