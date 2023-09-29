@@ -1,4 +1,4 @@
-# 0x00-hello_world: Explore the World of C Programming 🌟
+# Explore the World of C Programming 🌟
 
 This directory is all about getting started with C programming and exploring the fundamental concepts. Below, you'll find a brief overview of each task in this directory.
 
