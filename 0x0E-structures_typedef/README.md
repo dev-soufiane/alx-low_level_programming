@@ -1,4 +1,4 @@
-# Structures, typedef 🐶
+# Structures, typedef 🌟
 
 Welcome to the `0x0E-structures_typedef` directory, where you will dive into the world of structures and typedefs in C. These tasks will help you understand how to define and manipulate complex data structures.
 
