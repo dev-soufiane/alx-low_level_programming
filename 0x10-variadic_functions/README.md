@@ -12,7 +12,7 @@ Welcome to the `0x10-variadic_functions` directory, where you'll dive into the w
 
 - **Description:** Write a function that prints numbers, followed by a new line.
 
-### 2. One woman's constant is another woman's variable 🧪
+### 2. One woman's constant is another woman's variable 👩 
 
 - **Description:** Write a function that prints strings, followed by a new line.
 
