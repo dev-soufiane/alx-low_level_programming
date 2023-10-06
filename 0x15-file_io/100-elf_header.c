@@ -237,11 +237,11 @@ void printEntryAddress(unsigned long int entry, unsigned char *magic)
  *
  * Return: Void.
  */
-void closeElfFile(int fileDescriptor)
+void closeElfFile(int fd)
 {
-	if (close(fileDescriptor) == -1)
+	if (close(fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close file descriptor %d\n", fileDescriptor);
+		dprintf(STDERR_FILENO, "Error: Can't close file descriptor %d\n", fd);
 		exit(98);
 	}
 }
@@ -252,7 +252,6 @@ void closeElfFile(int fileDescriptor)
  * @argv: An array of pointers to the arguments.
  *
  * Return: 0 on success, 98 on error.
- * Description: If the file is not an ELF file or if there is an error, it exits with code 98.
  */
 int main(int argc, char *argv[])
 {
@@ -285,7 +284,7 @@ int main(int argc, char *argv[])
 	{
 		free(header);
 		closeElfFile(fileDescriptor);
-		dprintf(STDERR_FILENO, "Error: Unable to read ELF header from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error reading ELF header from %s\n", argv[1]);
 		return (98);
 	}
 	checkElfFile(header->e_ident);
